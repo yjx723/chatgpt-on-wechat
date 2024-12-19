@@ -23,14 +23,12 @@ ADD . ${BUILD_PREFIX}
 WORKDIR ${BUILD_PREFIX}
 
 COPY app.py /app.py
-ADD entrypoint.sh /entrypoint.sh
 
-USER root
-RUN chmod +x /entrypoint.sh \
-    && mkdir -p /home/noroot \
-    && groupadd -r noroot \
-    && useradd -r -g noroot -s /bin/bash -d /home/noroot noroot \
-    && chown -R noroot:noroot /home/noroot ${BUILD_PREFIX} /usr/local/lib
+#RUN chmod +x /entrypoint.sh
+#    && mkdir -p /home/noroot \
+#    && groupadd -r noroot \
+#    && useradd -r -g noroot -s /bin/bash -d /home/noroot noroot \
+#    && chown -R noroot:noroot /home/noroot ${BUILD_PREFIX} /usr/local/lib
 
 USER noroot
 
