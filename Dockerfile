@@ -22,7 +22,7 @@ RUN apt-get update \
 
 WORKDIR ${BUILD_PREFIX}
 
-COPY app.py /path/to/app.py
+COPY app.py /app.py
 
 RUN chmod +x /entrypoint.sh \
     && mkdir -p /home/noroot \
