@@ -25,6 +25,7 @@ WORKDIR ${BUILD_PREFIX}
 COPY app.py /app.py
 ADD entrypoint.sh /entrypoint.sh
 
+USER root
 RUN chmod +x /entrypoint.sh \
     && mkdir -p /home/noroot \
     && groupadd -r noroot \
