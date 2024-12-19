@@ -23,6 +23,7 @@ ADD . ${BUILD_PREFIX}
 WORKDIR ${BUILD_PREFIX}
 
 COPY app.py /app.py
+ADD entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh \
     && mkdir -p /home/noroot \
