@@ -22,8 +22,8 @@ ADD . ${BUILD_PREFIX}
 
 WORKDIR ${BUILD_PREFIX}
 
-COPY app.py /app.py
-COPY config.json /plugins/config.json
+COPY app.py /app/app.py
+COPY config.json /app/plugins/config.json
 
 #RUN chmod +x /entrypoint.sh
 #    && mkdir -p /home/noroot \
