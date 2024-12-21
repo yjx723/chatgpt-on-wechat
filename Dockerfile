@@ -31,6 +31,6 @@ COPY --chown=noroot:noroot plugins/config.json /plugins/config.json
 #    && useradd -r -g noroot -s /bin/bash -d /home/noroot noroot \
 #    && chown -R noroot:noroot /home/noroot ${BUILD_PREFIX} /usr/local/lib
 
-USER noroot
+USER root
 
 ENTRYPOINT ["/entrypoint.sh"]
