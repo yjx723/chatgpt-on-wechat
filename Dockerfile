@@ -23,7 +23,7 @@ ADD . ${BUILD_PREFIX}
 WORKDIR ${BUILD_PREFIX}
 
 COPY app.py /app.py
-COPY --chown=noroot:noroot plugins/config.json /plugins/config.json
+COPY plugins/config.json /plugins/config.json
 
 #RUN chmod +x /entrypoint.sh
 #    && mkdir -p /home/noroot \
