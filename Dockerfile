@@ -1,4 +1,4 @@
-FROM zhayujie/chatgpt-on-wechat
+FROM zhayujie/chatgpt-on-wechat:master
 
 LABEL maintainer="jingxian-young@hotmail.com"
 ARG TZ='Asia/Shanghai'
