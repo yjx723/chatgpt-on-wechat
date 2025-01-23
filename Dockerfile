@@ -33,4 +33,6 @@ COPY plugins/config.json /plugins/config.json
 
 USER root
 
+EXPOSE 8080
+
 ENTRYPOINT ["/entrypoint.sh"]
